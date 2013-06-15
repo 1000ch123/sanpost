@@ -10,14 +10,21 @@
 
 #import "ismViewController.h"
 
+#import "ismNavigationController.h"
+
 @implementation ismAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-	self.viewController = [[ismViewController alloc] initWithNibName:@"ismViewController" bundle:nil];
-	self.window.rootViewController = self.viewController;
+	
+	
+	//self.viewController = [[ismNavigationController alloc] init];
+	ismViewController *controller = [[ismViewController alloc] initWithNibName:@"ismViewController" bundle:nil];
+	
+	//self.window.rootViewController = self.viewController;
+	self.window.rootViewController = [[ismNavigationController alloc]initWithRootViewController:controller];
     [self.window makeKeyAndVisible];
     return YES;
 }

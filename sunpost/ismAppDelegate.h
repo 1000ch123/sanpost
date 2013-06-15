@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class ismViewController;
+//@class ismViewController;
+@class ismNavigationController;
 
 @interface ismAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ismViewController *viewController;
+@property (strong, nonatomic) ismNavigationController *viewController;
 
 @end
