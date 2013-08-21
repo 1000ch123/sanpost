@@ -27,5 +27,6 @@
 
 -(void)updateLabels;
 -(void)registerRegionCenter:(CLLocationCoordinate2D)coordinate radius:(double)rad identifier:(NSString*)identifier;
+-(void)regionCalclationWithMaxregion:(double)maxRegion resDict:(NSDictionary*)resDict;
 
 @end
